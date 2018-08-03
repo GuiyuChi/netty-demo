@@ -13,6 +13,7 @@ public class DiscardServerHandler extends ChannelInboundHandlerAdapter { // (1)
     public void channelRead(ChannelHandlerContext ctx, Object msg){
         // 抛弃服务器，将接收到的数据丢弃
         ((ByteBuf)msg).release();
+        System.out.print("test");
     }
 
 
